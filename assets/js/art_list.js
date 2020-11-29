@@ -125,7 +125,7 @@ function removeTr() {
                     return
                 }
                 if (len <= 1) {
-                    q.pagenum = q.pagenum == 1 ? 1 : q.pagenum--;
+                    q.pagenum = q.pagenum == 1 ? 1 : q.pagenum - 1;
                 }
                 // 重新渲染页面
                 initList();

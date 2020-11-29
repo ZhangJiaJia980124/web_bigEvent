@@ -104,7 +104,10 @@ function doSubmit(e) {
                 processData: false,
                 contentType: false,
                 success: function (ele) {
-                    console.log(ele);
+                    if (ele.status != 0) {
+                        layui.layer.msg(ele.message);
+                    }
+                    window.location.href = '../../article/art_list.html';
                 }
             })
         })
