@@ -9,7 +9,6 @@ $.ajaxPrefilter(function (options) {
 
     //统一 定义 complate 回调函数
     options.complete = function (res) {
-        console.log(res);
         if (res.responseJSON.status == 1 && res.responseJSON.message == "身份认证失败！") {
             // 没有登录 就 提示消息  并清空token值 强制跳转到login页面
             layui.layer.msg(res.responseJSON.message, {
